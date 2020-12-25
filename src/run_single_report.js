@@ -36,8 +36,11 @@ async function runSingleReport() {
     }
 
     deviceInfo = await genDeviceInfo();
+    const flags = settings.chrome_flags;
     if (subject === "")
       subject = '[W' + weekAndDay + '] Web PnP auto test report - ' + platform + ' - ' + deviceInfo["CPU"]["info"] + ' - ' + deviceInfo.Browser;
+    if (flags.length > 0)
+      subject += ' - ' + flags.join(',');
     console.log("Subject: ", subject);
 
     const workloadResults = await runTest.genWorkloadsResults(deviceInfo);

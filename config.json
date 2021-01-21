@@ -68,7 +68,6 @@
     "from": "hongjuan.wang@intel.com",
     "to":["yangx.a.zhou@intel.com", "yihuix.xie@intel.com"]
   },
-  "chrome_linux_password": "",
   "chromium_builder": {
     "enable_chromium_build": false,
     "bisect": {
